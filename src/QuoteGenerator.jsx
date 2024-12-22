@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./QuoteGenerator.css";
 
 export default function QuoteGenerator(){
-    const [quote, setQuote] = useState("Click the below button to generate a random quote!");
+    const [currentQuote, setCurrentQuote] = useState("Click the below button to generate a random quote!");
 
     const quotes = [
         "You can't use up creativity. The more you use, the more you have. - Maya Angelou",
@@ -14,17 +14,17 @@ export default function QuoteGenerator(){
         "Believe you can and you’re halfway there. - Theodore Roosevelt"
       ];
     
-    function handleButtonClick(){
-        setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+    function generateQuote(){
+        setCurrentQuote(quotes[Math.floor(Math.random() * quotes.length)]);
     }
 
     return (
         <div className="quote-generator-container">
             <h1>Random Quote Generator</h1>
             <div className="quote-container">
-                <p>{quote}</p>
+                <p>{currentQuote}</p>
             </div>
-            <button onClick={handleButtonClick}>Generate</button>
+            <button onClick={generateQuote}>Generate</button>
         </div>
     );
 }
