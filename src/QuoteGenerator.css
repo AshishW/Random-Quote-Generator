@@ -1,0 +1,15 @@
+.quote-container{
+    padding: 10px;
+    background-color: #9985d2;
+    border-radius: 10px;
+    margin: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.quote-generator-container{
+    border: 3px solid #b1a3d8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50vw;
+}
